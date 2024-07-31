@@ -1,0 +1,377 @@
+# Write the updated HTML content with additional improvements to a new file again
+updated_html_with_additional_improvements = """
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος</title>
+    <meta name="description" content="Εξαιρετικές συμβουλευτικές υπηρεσίες για επιχειρήσεις και ασφαλιστικές λύσεις.">
+    <meta name="keywords" content="συμβουλευτικές υπηρεσίες, ασφαλιστικές λύσεις, επιχειρήσεις, σύμβουλος">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+        }
+        header, section {
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            cursor: pointer;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος</h1>
+        <p>Εξαιρετικές συμβουλευτικές υπηρεσίες για επιχειρήσεις και ασφαλιστικές λύσεις.</p>
+    </header>
+    <nav>
+        <a onclick="showSection('about')" id="link-about">Σχετικά με εμένα</a>
+        <a onclick="showSection('business-services')" id="link-business-services">Υπηρεσίες - Σύμβουλος Επιχειρήσεων</a>
+        <a onclick="showSection('insurance-services')" id="link-insurance-services">Υπηρεσίες - Ασφαλιστικός Σύμβουλος</a>
+        <a onclick="showSection('webinars')" id="link-webinars">Webinars</a>
+        <a onclick="showSection('testimonials')" id="link-testimonials">Μαρτυρίες Πελατών</a>
+        <a onclick="showSection('contact')" id="link-contact">Επικοινωνία</a>
+    </nav>
+    <section id="about">
+        <h2>Σχετικά με εμένα</h2>
+        <img src="your-image-path.jpg" alt="Περιγραφή Εικόνας" style="width:100%;max-width:600px;border-radius:8px;">
+        <p>Είμαι ένας έμπειρος σύμβουλος επιχειρήσεων και ασφαλιστικός σύμβουλος με πολυετή εμπειρία στον χώρο.</p>
+        <video width="100%" controls style="border-radius:8px;">
+            <source src="your-video-path.mp4" type="video/mp4">
+            Το πρόγραμμα περιήγησής σας δεν υποστηρίζει την αναπαραγωγή βίντεο.
+        </video>
+    </section>
+    <section id="business-services" style="display:none;">
+        <h2>Υπηρεσίες - Σύμβουλος Επιχειρήσεων</h2>
+        <p>Προσφέρω στρατηγικές συμβουλές για την ανάπτυξη της επιχείρησής σας, ανάλυση αγοράς και επιχειρησιακό σχεδιασμό.</p>
+    </section>
+    <section id="insurance-services" style="display:none;">
+        <h2>Υπηρεσίες - Ασφαλιστικός Σύμβουλος</h2>
+        <p>Παρέχω εξειδικευμένες ασφαλιστικές λύσεις για ιδιώτες και επιχειρήσεις, προσαρμοσμένες στις ανάγκες σας.</p>
+    </section>
+    <section id="webinars" style="display:none;">
+        <h2>Webinars</h2>
+        <p>Ενημερωθείτε για τα επερχόμενα webinars και δείτε τα προηγούμενα σεμινάρια μου.</p>
+    </section>
+    <section id="testimonials" style="display:none;">
+        <h2>Μαρτυρίες Πελατών</h2>
+        <p>"Η συνεργασία μας ήταν εξαιρετική, επαγγελματίας με γνώσεις και συνέπεια." - Πελάτης Α</p>
+        <p>"Οι υπηρεσίες του ήταν καταλυτικές για την επιτυχία της επιχείρησής μας." - Πελάτης Β</p>
+    </section>
+    <section id="contact" style="display:none;">
+        <h2>Επικοινωνία</h2>
+        <form>
+            <label for="name">Όνομα:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Μήνυμα:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="Αποστολή">
+        </form>
+        <p>Email: info@example.com</p>
+        <p>Τηλέφωνο: +30 210 1234567</p>
+    </section>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+    <footer>
+        <p>© 2024 Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος. All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(id).style.display = 'block';
+            // Highlight the active link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById('link-' + id).classList.add('active');
+        }
+    </script>
+    <!-- Begin Live Chat Widget -->
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                facebook: "your-facebook-page", // Facebook page ID
+                whatsapp: "+123456789", // WhatsApp number
+                email: "info@example.com", // Email
+                call_to_action: "Χρειάζεστε βοήθεια;", // Call to action
+                button_color: "#4CAF50", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "facebook,whatsapp,email", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName
+Φαίνεται ότι υπάρχει πρόβλημα με τη δημιουργία του συνδέσμου λήψης του αρχείου. Ωστόσο, εδώ είναι το ενημερωμένο περιεχόμενο του αρχείου HTML, το οποίο μπορείτε να αντιγράψετε και να αποθηκεύσετε τοπικά στον υπολογιστή σας:
+
+html
+Αντιγραφή κώδικα
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος</title>
+    <meta name="description" content="Εξαιρετικές συμβουλευτικές υπηρεσίες για επιχειρήσεις και ασφαλιστικές λύσεις.">
+    <meta name="keywords" content="συμβουλευτικές υπηρεσίες, ασφαλιστικές λύσεις, επιχειρήσεις, σύμβουλος">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+        }
+        header, section {
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            cursor: pointer;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος</h1>
+        <p>Εξαιρετικές συμβουλευτικές υπηρεσίες για επιχειρήσεις και ασφαλιστικές λύσεις.</p>
+    </header>
+    <nav>
+        <a onclick="showSection('about')" id="link-about">Σχετικά με εμένα</a>
+        <a onclick="showSection('business-services')" id="link-business-services">Υπηρεσίες - Σύμβουλος Επιχειρήσεων</a>
+        <a onclick="showSection('insurance-services')" id="link-insurance-services">Υπηρεσίες - Ασφαλιστικός Σύμβουλος</a>
+        <a onclick="showSection('webinars')" id="link-webinars">Webinars</a>
+        <a onclick="showSection('testimonials')" id="link-testimonials">Μαρτυρίες Πελατών</a>
+        <a onclick="showSection('contact')" id="link-contact">Επικοινωνία</a>
+    </nav>
+    <section id="about">
+        <h2>Σχετικά με εμένα</h2>
+        <img src="your-image-path.jpg" alt="Περιγραφή Εικόνας" style="width:100%;max-width:600px;border-radius:8px;">
+        <p>Είμαι ένας έμπειρος σύμβουλος επιχειρήσεων και ασφαλιστικός σύμβουλος με πολυετή εμπειρία στον χώρο.</p>
+        <video width="100%" controls style="border-radius:8px;">
+            <source src="your-video-path.mp4" type="video/mp4">
+            Το πρόγραμμα περιήγησής σας δεν υποστηρίζει την αναπαραγωγή βίντεο.
+        </video>
+    </section>
+    <section id="business-services" style="display:none;">
+        <h2>Υπηρεσίες - Σύμβουλος Επιχειρήσεων</h2>
+        <p>Προσφέρω στρατηγικές συμβουλές για την ανάπτυξη της επιχείρησής σας, ανάλυση αγοράς και επιχειρησιακό σχεδιασμό.</p>
+    </section>
+    <section id="insurance-services" style="display:none;">
+        <h2>Υπηρεσίες - Ασφαλιστικός Σύμβουλος</h2>
+        <p>Παρέχω εξειδικευμένες ασφαλιστικές λύσεις για ιδιώτες και επιχειρήσεις, προσαρμοσμένες στις ανάγκες σας.</p>
+    </section>
+    <section id="webinars" style="display:none;">
+        <h2>Webinars</h2>
+        <p>Ενημερωθείτε για τα επερχόμενα webinars και δείτε τα προηγούμενα σεμινάρια μου.</p>
+    </section>
+    <section id="testimonials" style="display:none;">
+        <h2>Μαρτυρίες Πελατών</h2>
+        <p>"Η συνεργασία μας ήταν εξαιρετική, επαγγελματίας με γνώσεις και συνέπεια." - Πελάτης Α</p>
+        <p>"Οι υπηρεσίες του ήταν καταλυτικές για την επιτυχία της επιχείρησής μας." - Πελάτης Β</p>
+    </section>
+    <section id="contact" style="display:none;">
+        <h2>Επικοινωνία</h2>
+        <form>
+            <label for="name">Όνομα:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Μήνυμα:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <input type="submit" value="Αποστολή">
+        </form>
+        <p>Email: info@example.com</p>
+        <p>Τηλέφωνο: +30 210 1234567</p>
+    </section>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+    <footer>
+        <p>© 2024 Σύμβουλος Επιχειρήσεων & Ασφαλιστικός Σύμβουλος. All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(id).style.display = 'block';
+            // Highlight the active link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.getElementById('link-' + id).classList.add('active');
+        }
+    </script>
+    <!-- Begin Live Chat Widget -->
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                facebook: "your-facebook-page", // Facebook page ID
+                whatsapp: "+123456789", // WhatsApp number
+                email: "info@example.com", // Email
+                call_to_action: "Χρειάζεστε βοήθεια;", // Call to action
+                button_color: "#4CAF50", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "facebook,whatsapp,email", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- End Live Chat Widget -->
+</body>
+</html>
